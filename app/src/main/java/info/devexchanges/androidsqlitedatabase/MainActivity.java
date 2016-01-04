@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ListViewAdapter(this, R.layout.item_listview, friendList, databaseHelper);
         listView.setAdapter(adapter);
         title.setVisibility(View.VISIBLE);
-        title.setText("Total records: " + friendList.size());
+        title.setText("Total records: " + databaseHelper.getContactsCount());
     }
 
     @Override

@@ -47,8 +47,10 @@ public class ListViewAdapter extends ArrayAdapter<Friend> {
             @Override
             public void onClick(View view) {
                 databaseHelper.deleteFriend(getItem(position)); //delete in db
-                friendList.remove(position); // update the arraylist
-                notifyDataSetChanged();
+                Toast.makeText(activity, "Deleted!", Toast.LENGTH_SHORT).show();
+
+                //reload the database to view
+                activity.reloadingDatabase();
             }
         });
 

@@ -43,7 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // Adding a new record (friend) to table
-    void addNewFriend(Friend friend) {
+    public void addNewFriend(Friend friend) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
